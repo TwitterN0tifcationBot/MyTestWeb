@@ -1,0 +1,82 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin and Moderator Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin and Moderator Log</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Admin/Moderator</th>
+            <th>Action</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>YYYY-MM-DD</td>
+            <td>HH:MM:SS</td>
+            <td>Admin/Moderator Name</td>
+            <td>Action Taken</td>
+            <td>Additional Details</td>
+        </tr>
+    </table>
+    <form>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time"><br><br>
+        <label for="admin">Admin/Moderator:</label>
+        <input type="text" id="admin" name="admin"><br><br>
+        <label for="action">Action:</label>
+        <input type="text" id="action" name="action"><br><br>
+        <label for="details">Details:</label>
+        <textarea id="details" name="details"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Add event listener to form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Get form data
+            const date = document.querySelector('#date').value;
+            const time = document.querySelector('#time').value;
+            const admin = document.querySelector('#admin').value;
+            const action = document.querySelector('#action').value;
+            const details = document.querySelector('#details').value;
+            // Create new table row
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${date}</td>
+                <td>${time}</td>
+                <td>${admin}</td>
+                <td>${action}</td>
+                <td>${details}</td>
+            `;
+            // Add new row to table
+            document.querySelector('table').appendChild(newRow);
+        });
+    </script>
+</body>
+</html>
+```

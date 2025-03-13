@@ -1,0 +1,70 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Template Maker</h1>
+        <nav>
+            <ul>
+                <li><a href="#moderation">Moderation</a></li>
+                <li><a href="#giveaways">Giveaways</a></li>
+                <li><a href="#leveling">Leveling</a></li>
+                <li><a href="#commands">Commands</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="moderation">
+            <h2>Moderation Templates</h2>
+            <form>
+                <label for="moderation-template">Template:</label>
+                <textarea id="moderation-template" name="moderation-template"></textarea>
+                <button>Save Template</button>
+            </form>
+        </section>
+        <section id="giveaways">
+            <h2>Giveaways Templates</h2>
+            <form>
+                <label for="giveaways-template">Template:</label>
+                <textarea id="giveaways-template" name="giveaways-template"></textarea>
+                <button>Save Template</button>
+            </form>
+        </section>
+        <section id="leveling">
+            <h2>Leveling Templates</h2>
+            <form>
+                <label for="leveling-template">Template:</label>
+                <textarea id="leveling-template" name="leveling-template"></textarea>
+                <button>Save Template</button>
+            </form>
+        </section>
+        <section id="commands">
+            <h2>Commands</h2>
+            <h3>Slash Commands</h3>
+            <form>
+                <label for="slash-command">Command:</label>
+                <input type="text" id="slash-command" name="slash-command">
+                <label for="slash-command-description">Description:</label>
+                <textarea id="slash-command-description" name="slash-command-description"></textarea>
+                <button>Save Command</button>
+            </form>
+            <h3>Prefix Commands</h3>
+            <form>
+                <label for="prefix-command">Command:</label>
+                <input type="text" id="prefix-command" name="prefix-command">
+                <label for="prefix-command-description">Description:</label>
+                <textarea id="prefix-command-description" name="prefix-command-description"></textarea>
+                <button>Save Command</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+```
